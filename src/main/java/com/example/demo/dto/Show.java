@@ -1,22 +1,26 @@
 package com.example.demo.dto;
 
-import lombok.RequiredArgsConstructor;
+import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-@Entity
-@RequiredArgsConstructor
+@Data
 public class Show {
-        @Id
-        @Column
-        private Long id;
-        @Column
-        private String name;
 
-        // standard constructors
+    private String showNumber;
+    private String numRows;
+    private String numSeatsPerRow;
+    private String cancellationWindowInMinutes;
+    private SeatInformation[][] seatInformation;
 
-        // standard getters and setters
+    public Show(String showNumber, String numRows, String numSeatsPerRow, String cancellationWindowInMinutes) {
+        this.showNumber=showNumber;
+        this.numRows=numRows;
+        this.numSeatsPerRow=numSeatsPerRow;
+        this.cancellationWindowInMinutes=cancellationWindowInMinutes;
+        this.seatInformation = new SeatInformation[Integer.parseInt(numRows)][Integer.parseInt(numSeatsPerRow)];
+        for(int i=0; i<Integer.parseInt(numRows);i++){
+            for(int j=0;j<Integer.parseInt(numSeatsPerRow);j++){
+                this.seatInformation[i][j] = new SeatInformation(true,null,null,null);
+            }
+        }
     }
-
 }
