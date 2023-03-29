@@ -2,11 +2,17 @@
 
 
 ## Getting started
-To start the application, an environment variable has to be included
+To start the application, a vm arguement has to be included
 
 ```
--Dstart.enabled=true
+start.enabled=true
 ```
+Start the application with the following after compiling and getting the jar file
+
+```
+java -jar -Dstart.enabled=true demo-0.0.1-SNAPSHOT.jar
+```
+
 
 ## Commands
 Commands for the application is as follows:
