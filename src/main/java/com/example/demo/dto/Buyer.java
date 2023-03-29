@@ -10,5 +10,5 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Buyer {
     private String phoneNumber;
-    private Map<UUID,Booking> bookingList;
+    private Map<UUID, Booking> bookingList;
 }

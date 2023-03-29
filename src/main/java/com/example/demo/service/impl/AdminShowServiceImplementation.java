@@ -72,4 +72,13 @@ public class AdminShowServiceImplementation implements ShowService {
         }
     }
 
+    @Override
+    public void changeCancellationWindow(String showNumber, String cancellationWindow) {
+        if (theatre.getShows().containsKey(showNumber)) {
+            theatre.getShows().get(showNumber).setCancellationWindowInMinutes(cancellationWindow);
+        } else {
+            System.out.println("Show number does not exists, please try another number");
+        }
+    }
+
 }

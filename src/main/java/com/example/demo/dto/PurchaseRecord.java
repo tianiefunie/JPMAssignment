@@ -10,6 +10,6 @@ import java.util.Map;
 @Component
 @AllArgsConstructor
 public class PurchaseRecord {
-    private Map<String,Buyer> buyers;
+    private Map<String, Buyer> buyers;
 
 }

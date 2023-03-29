@@ -1,4 +1,4 @@
-package com.example.demo.commandListener;
+package com.example.demo.command;
 
 import com.example.demo.service.impl.AdminShowServiceImplementation;
 import com.example.demo.service.impl.BuyerServiceImplementation;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
 @Component
-@ConditionalOnProperty(name = "start.enabled",havingValue="true")
+@ConditionalOnProperty(name = "start.enabled", havingValue = "true")
 public class CommandLineService implements CommandLineRunner {
 
     @Autowired
@@ -37,6 +37,8 @@ public class CommandLineService implements CommandLineRunner {
                         adminShowServiceImplementation.view(commandArgs[1]);
                     } else if (commandArgs[0].equals("Add") && commandArgs.length == 4) {
                         adminShowServiceImplementation.add(commandArgs[1], commandArgs[2], commandArgs[3]);
+                    } else if (commandArgs[0].equals("ChangeCancellationWindow") && commandArgs.length == 3) {
+                        adminShowServiceImplementation.changeCancellationWindow(commandArgs[1], commandArgs[2]);
                     } else if (commandArgs[0].equals("Leave")) {
                         break;
                     } else {
@@ -66,11 +68,6 @@ public class CommandLineService implements CommandLineRunner {
             } else {
                 System.out.println("Invalid role, please try again.");
             }
-
-
-//                CountryRepository repo = context.getBean(CountryRepository.class);
-//                Country country = repo.findById(1);
-//                System.out.println(country.getName());
         }
     }
 

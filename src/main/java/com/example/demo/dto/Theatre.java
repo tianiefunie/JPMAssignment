@@ -11,11 +11,11 @@ import java.util.Map;
 @Component
 @AllArgsConstructor
 public class Theatre {
-    private Map<String,Show> shows;
+    private Map<String, Show> shows;
 
     public void addShow(String showNumber, String numRows, String numSeatsPerRow, String cancellationWindowMinutes) {
-        Show show = new Show(showNumber,numRows,numSeatsPerRow,cancellationWindowMinutes);
-        this.shows.put(showNumber,show);
+        Show show = new Show(showNumber, numRows, numSeatsPerRow, cancellationWindowMinutes);
+        this.shows.put(showNumber, show);
     }
 
 }

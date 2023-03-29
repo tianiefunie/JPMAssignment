@@ -138,4 +138,25 @@ public class AdminShowServiceImplementationTest {
         assertEquals(expectedOutput.trim(), actualOutput.toString().trim());
     }
 
+    @Test
+    public void testChangeCancellationWindowSuccess() {
+        Map<String, Show> shows = new HashMap<>();
+        Show show = new Show("1", "26", "10", "4");
+        shows.put("1", show);
+        doReturn(shows).when(theatre).getShows();
+        adminShowServiceImplementation.changeCancellationWindow("1", "2");
+        assertEquals(shows.get("1").getCancellationWindowInMinutes(), "2");
+    }
+
+    @Test
+    public void testChangeCancellationWindowFailure() {
+        //To capture output
+        ByteArrayOutputStream actualOutput = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(actualOutput));
+        doReturn(new HashMap<>()).when(theatre).getShows();
+        adminShowServiceImplementation.changeCancellationWindow("1", "2");
+        String expectedOutput = "Show number does not exists, please try another number";
+        assertEquals(expectedOutput.trim(), actualOutput.toString().trim());
+    }
+
 }

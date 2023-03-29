@@ -1,4 +1,4 @@
-package com.example.demo.commandListener;
+package com.example.demo.command;
 
 import com.example.demo.service.impl.AdminShowServiceImplementation;
 import com.example.demo.service.impl.BuyerServiceImplementation;
@@ -23,7 +23,7 @@ public class CommandLineServiceTest {
 
     @Test
     public void testAdminRoleCommands() {
-        String input = "Admin\nSetup 1 2 3 4\nView 1\nAdd 2 5 6\nLeave\nexit\n";
+        String input = "Admin\nSetup 1 2 3 4\nView 1\nAdd 2 5 6\nChangeCancellationWindow 1 5\nLeave\nexit\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
@@ -32,6 +32,8 @@ public class CommandLineServiceTest {
         verify(adminShowServiceImplementation, times(1)).setupShow("1", "2", "3", "4");
         verify(adminShowServiceImplementation, times(1)).view("1");
         verify(adminShowServiceImplementation, times(1)).add("2", "5", "6");
+        verify(adminShowServiceImplementation, times(1)).changeCancellationWindow("1", "5");
+
     }
 
     @Test
@@ -57,7 +59,7 @@ public class CommandLineServiceTest {
 
         verify(adminShowServiceImplementation, times(0)).setupShow(anyString(), anyString(), anyString(), anyString());
         verify(adminShowServiceImplementation, times(0)).view(anyString());
-        verify(adminShowServiceImplementation, times(0)).add(anyString(), anyString(),anyString());
+        verify(adminShowServiceImplementation, times(0)).add(anyString(), anyString(), anyString());
         verify(buyerServiceImplementation, times(0)).availability(anyString());
         verify(buyerServiceImplementation, times(0)).book(anyString(), anyString(), anyString());
         verify(buyerServiceImplementation, times(0)).cancel(anyString(), anyString());
@@ -73,7 +75,7 @@ public class CommandLineServiceTest {
         commandLineService.run();
         verify(adminShowServiceImplementation, times(0)).setupShow(anyString(), anyString(), anyString(), anyString());
         verify(adminShowServiceImplementation, times(0)).view(anyString());
-        verify(adminShowServiceImplementation, times(0)).add(anyString(), anyString(),anyString());
+        verify(adminShowServiceImplementation, times(0)).add(anyString(), anyString(), anyString());
     }
 
     @Test
