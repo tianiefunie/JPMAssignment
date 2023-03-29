@@ -7,7 +7,7 @@ To start the application, a vm arguement has to be included
 ```
 start.enabled=true
 ```
-Start the application with the following after compiling and getting the jar file
+Start the application by using the respective JAR file with the following commands.
 
 ```
 java -jar -Dstart.enabled=true demo-0.0.1-SNAPSHOT.jar
