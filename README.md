@@ -12,19 +12,20 @@ To start the application, an environment variable has to be included
 Commands for the application is as follows:
 
 ### Admin
-- Setup [show number] [number of rows] [number of seats per row] [cancellation window period]
-- View [show number]
-- Add [show number] [number of rows] [number of seats per row]
+- `Setup [show number] [number of rows] [number of seats per row] [cancellation window period]`
+- `View [show number]`
+- `Add [show number] [number of rows] [number of seats per row]`
     
 ###  Buyer
 - `Availability [show number]`
 - `Book [show number] [phone number] [seats desired separated by comma]`
 - `Cancel [ticket number] [phone number]`
   
-Please note to start every command with capital as they are case sensitive, and ensure spaces between each argument
-passed in.
+Please note that every command should begin with a capital letter as they are case sensitive. Additionally, ensure that there are spaces between each argument that is passed in. 
 
-You can also exit the application with "exit"
+To switch between Admin and Buyer role, you can use `Leave` while in one role, and pick the other.
+
+You can also exit the application with `exit`
 
 ## Assumptions:
 
