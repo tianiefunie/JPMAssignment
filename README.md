@@ -1,24 +1,32 @@
 # Show Booking Spring Boot Application
 
-To start the application, an environment variable has to be include -> start.enabled=true
 
+## Getting started
+To start the application, an environment variable has to be included
+
+```
+-Dstart.enabled=true
+```
+
+## Commands
 Commands for the application is as follows:
 
-- Admin
-    - Setup [show number] [number of rows] [number of seats per row] [cancellation window period]
-    - View [show number]
-    - Add [show number] [number of rows] [number of seats per row]
-- Buyer
-    - Availability [show number]
-    - Book [show number] [phone number] [seats desired separated by comma]
-    - Cancel [ticket number] [phone number]
+### Admin
+- Setup [show number] [number of rows] [number of seats per row] [cancellation window period]
+- View [show number]
+- Add [show number] [number of rows] [number of seats per row]
+    
+###  Buyer
+- `Availability [show number]`
+- `Book [show number] [phone number] [seats desired separated by comma]`
+- `Cancel [ticket number] [phone number]`
   
 Please note to start every command with capital as they are case sensitive, and ensure spaces between each argument
 passed in.
 
 You can also exit the application with "exit"
 
-Assumptions:
+## Assumptions:
 
 1. Phone number does not have to be a valid one.
 
