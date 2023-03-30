@@ -21,7 +21,7 @@ public class AdminShowServiceImplementation implements ShowService {
                 theatre.addShow(showNumber, numRows, numSeatsPerRow, cancellationWindowMinutes);
             }
         } else {
-            System.out.println("Show number does not exists, please try another number");
+            System.out.println("Show number exists, please try another number");
         }
     }
 
