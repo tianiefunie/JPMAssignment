@@ -22,6 +22,7 @@ Commands for the application is as follows:
 - `Setup [show number] [number of rows] [number of seats per row] [cancellation window period]`
 - `View [show number]`
 - `Add [show number] [number of rows] [number of seats per row]`
+- `ChangeCancellationWindow [show number] [cancellation window period]`
     
 ###  Buyer
 - `Availability [show number]`
