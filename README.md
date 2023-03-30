@@ -35,7 +35,7 @@ To switch between Admin and Buyer role, you can use `Leave` while in one role, a
 
 You can also exit the application with `exit`
 
-## Assumptions:
+## Assumptions
 
 1. Phone number does not have to be a valid one.
 
