@@ -19,8 +19,9 @@ java -jar -Dstart.enabled=true demo-0.0.1-SNAPSHOT.jar
 Commands for the application is as follows:
 
 ### Admin
-- `Setup [show number] [number of rows] [number of seats per row] [cancellation window period]`
-- `View [show number]`
+- Set up show:`Setup [show number] [number of rows] [number of seats per row] [cancellation window period]`
+    - E.g. `Setup 1 2 3 4`
+- View show by show number `View [show number]`
 - `Add [show number] [number of rows] [number of seats per row]`
 - `ChangeCancellationWindow [show number] [cancellation window period]`
     
