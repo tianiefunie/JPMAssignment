@@ -2,15 +2,14 @@
 
 
 ## Getting started
-The project runs on java 8
+The project runs on Java 8.
 
-To start the application, a vm arguement has to be included
+To start the application, a vm arguement needs to be included
 
 ```
 start.enabled=true
 ```
-Start the application by using the respective JAR file with the following commands.
-
+To start the application using the respective JAR file, use the following command:
 ```
 java -jar -Dstart.enabled=true demo-0.0.1-SNAPSHOT.jar
 ```
