@@ -21,7 +21,7 @@ Commands for the application is as follows:
 ### Admin
 - Set up show:`Setup [show number] [number of rows] [number of seats per row] [cancellation window period]`
     - E.g. `Setup 1 2 3 4`
-- View show by show number: `View [show number]`\
+- View show by show number: `View [show number]`
     - E.g. `View 1`
 - Add more rows/seats: `Add [show number] [number of rows] [number of seats per row]`
     - E.g. `Add 1 2 2`
