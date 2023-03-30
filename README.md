@@ -21,14 +21,20 @@ Commands for the application is as follows:
 ### Admin
 - Set up show:`Setup [show number] [number of rows] [number of seats per row] [cancellation window period]`
     - E.g. `Setup 1 2 3 4`
-- View show by show number `View [show number]`
-- `Add [show number] [number of rows] [number of seats per row]`
-- `ChangeCancellationWindow [show number] [cancellation window period]`
+- View show by show number: `View [show number]`\
+    - E.g. `View 1`
+- Add more rows/seats: `Add [show number] [number of rows] [number of seats per row]`
+    - E.g. `Add 1 2 2`
+- Change cancellation window period:`ChangeCancellationWindow [show number] [cancellation window period]`
+    - E.g. `ChangeCancellationWindow 1 2`
     
 ###  Buyer
-- `Availability [show number]`
-- `Book [show number] [phone number] [seats desired separated by comma]`
-- `Cancel [ticket number] [phone number]`
+- Availability of show number: `Availability [show number]`
+    - E.g. `Availability 1`
+- Book show and seats under a phone number: `Book [show number] [phone number] [seats desired separated by comma]`
+    - E.g. `Book 1 98764321 A0,A1,B1`
+- Cancel booked show: `Cancel [ticket number] [phone number]`
+    - E.g. `Cancel 0f4d4f7e-8f84-4e9e-9c15-7dc24f8b3201 987654321`
   
 Please note that every command should begin with a capital letter as they are case sensitive. Additionally, ensure that there are spaces between each argument that is passed in. 
 
