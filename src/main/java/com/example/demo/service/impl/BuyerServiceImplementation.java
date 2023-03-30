@@ -58,7 +58,7 @@ public class BuyerServiceImplementation implements BuyerService {
                     }
                 }
             } else {
-                System.out.println("1 or more seats are unavailable for booking. Please try again");
+                System.out.println("1 or more seats are unavailable for booking. Please try again.");
             }
         } else {
             System.out.println("Show number does not exists, please try another number.");
@@ -68,7 +68,7 @@ public class BuyerServiceImplementation implements BuyerService {
     @Override
     public void cancel(String ticketNumber, String phoneNumber) {
         if (purchaseRecord.getBuyers().containsKey(phoneNumber)) {
-            if (purchaseRecord.getBuyers().get(phoneNumber).getBookingList().containsKey(UUID.fromString(ticketNumber))) {
+            if (ticketNumber.matches("[a-zA-Z0-9-]+") && purchaseRecord.getBuyers().get(phoneNumber).getBookingList().containsKey(UUID.fromString(ticketNumber))) {
                 Booking booking = purchaseRecord.getBuyers().get(phoneNumber).getBookingList().get(UUID.fromString(ticketNumber));
                 if (checkValidityOfCancellation(booking)) {
                     SeatInformation[][] seatInformation = theatre.getShows().get(booking.getShowNumber()).getSeatInformation();
@@ -130,7 +130,7 @@ public class BuyerServiceImplementation implements BuyerService {
             seatInformation[rowNumber][seatNumber].setTicketNumber(ticketNumber);
         }
 
-        System.out.println("You have successfully booked seats " + seatsList + " for show " + showNumber +  " under the follow phone number " + phoneNumber+ ". Your ticket number is " + ticketNumber + ".");
+        System.out.println("You have successfully booked seats " + seatsList + " for show " + showNumber +  " under the follow phone number " + phoneNumber+ ". Your ticket number is " + ticketNumber + " . Enjoy!");
     }
 
     private boolean checkValidityOfCancellation(Booking booking) {
