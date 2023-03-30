@@ -11,7 +11,7 @@ start.enabled=true
 ```
 To start the application using the respective JAR file, use the following command:
 ```
-java -jar -Dstart.enabled=true demo-0.0.1-SNAPSHOT.jar
+java -jar -Dstart.enabled=true ShowBookingApplication-0.0.1-SNAPSHOT
 ```
 
 
@@ -49,14 +49,16 @@ You can also exit the application with `exit`
 2. Seats desired are only having 2 characters max, where first character is an alphabet character and second one is an
    integer from 0-9.
 
-3. Ticket numbers generated will always be unique using UUID
+3. Ticket numbers generated will always be unique using UUID.
 
 4. There will be no removal of rows/seats once the show has been configured at the start. You can only add but not
    remove.
 
 5. Cancellation window can be in negative numbers, but it'll be equivalent to giving 0.
 
-6. No extreme values will be given to break the system on purpose
+6. No extreme values will be given to break the system on purpose.
+
+7. Shows set up will be running forever.
 
 ## Run test cases
 To run all test cases, navigate to the root directory of the Spring Boot folder and execute the command `mvn test` with any Maven version that is compatible with Java 8.
