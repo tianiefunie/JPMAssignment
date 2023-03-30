@@ -2,6 +2,8 @@
 
 
 ## Getting started
+The project runs on java 8
+
 To start the application, a vm arguement has to be included
 
 ```
@@ -48,3 +50,6 @@ You can also exit the application with `exit`
 5. Cancellation window can be in negative numbers, but it'll be equivalent to giving 0.
 
 6. No extreme values will be given to break the system on purpose
+
+## Run test cases
+To run all test cases, navigate to the root directory of the Spring Boot folder and execute the command `mvn test` with any Maven version that is compatible with Java 8.
